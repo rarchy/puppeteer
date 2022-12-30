@@ -22,17 +22,7 @@
     "lint:prettier": "prettier --check .",
     "lint": "run-s lint:prettier lint:eslint",
     "postinstall": "npm run postinstall --workspaces --if-present",
-    "prepare": "husky install",
-    "test-install": "npm run test --workspace @puppeteer-test/installation",
-    "test-types": "tsd -t packages/puppeteer",
-    "test:chrome:headful": "npm test -- --test-suite chrome-headful",
-    "test:chrome:headless-chrome": "npm test -- --test-suite chrome-new-headless",
-    "test:chrome:headless": "npm test -- --test-suite chrome-headless",
-    "test:chrome": "run-s test:chrome:*",
-    "test:firefox:headful": "npm test -- --test-suite firefox-headful",
-    "test:firefox:headless": "npm test -- --test-suite firefox-headless",
-    "test:firefox": "run-s test:firefox:*",
-    "test": "cross-env PUPPETEER_DEFERRED_PROMISE_DEBUG_TIMEOUT=20000 node tools/mochaRunner/lib/main.js"
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
